@@ -1,13 +1,20 @@
+### ts release version of ali-oss supoort tree shaking
+
+[ali-oss](https://github.com/ali-sdk/ali-oss)
+
 ### Installation
 ```bash
-yarn add ali-oss
+pnpm add ali-oss-sdk
 # or
-npm install ali-oss
+yarn add ali-oss-sdk
+# or
+npm install ali-oss-sdk
 ```
 
 ### Quick start
 ```javascript
-import { Client, put, get } from 'ali-oss/es'
+import { Client, put, get } from 'ali-oss-sdk
+es'
 
 const config = {
   accessKeyId: 'your access key id',
@@ -16,19 +23,24 @@ const config = {
   region: 'oss-cn-hangzhou'
 }
 
-// before use
+
+
+ before use
 Client.use(put, get);
 
 const client = new Client(config);
 
 const uploadName = 'test.txt'
 const file =  new File(["foo"], "foo.txt", {
-	type: "text/plain",
+	type: "text
+plain",
 })
 
 client.put(uploadName, file).then(
   client.get(uploadName).then(res => {
-    console.log(res.content.toString) // foo
+    console.log(res.content.toString) 
+
+ foo
   })
 )
 
@@ -37,5 +49,82 @@ client.put(uploadName, file).then(
 
 
 ```javascript
-multipartUpload/putStream/put/abortBucketWorm/completeBucketWorm/deleteBucketLifecycle/deleteBucketCORS/deleteBucket/deleteBucketPolicy/deleteBucketEncryption/deleteBucketLogging/deleteBucketReferer/deleteBucketTags/extendBucketWorm/deleteBucketWebsite/getBucketACL/getBucketCORS/getBucketEncryption/getBucketInfo/getBucketLifecycle/getBucketPolicy/getBucketLogging/getBucketLocation/getBucketReferer/getBucketTags/getBucketRequestPayment/getBucketVersioning/getBucketWebsite/getBucketWorm/initiateBucketWorm/putBucketACL/listBuckets/putBucket/putBucketCORS/putBucketEncryption/putBucketPolicy/putBucketLifecycle/putBucketReferer/putBucketLogging/putBucketRequestPayment/putBucketVersioning/putBucketTags/putBucketWebsite/processObjectSave/abortMultipartUpload/handleUploadPart/listParts/completeMultipartUpload/listUploads/initMultipartUpload/multipartUploadCopy/resumeMultipart/uploadPart/uploadPartCopy/append/calculatePostSignature/copy/deleteMulti/deleteObject/deleteObjectTagging/generateObjectUrl/getACL/get/getAsyncFetch/getBucketVersions/getObjectMeta/getObjectTagging/getObjectUrl/getSymlink/head/list/postAsyncFetch/putACL/putMeta/putObjectTagging/restore/putSymlink/signatureUrl
+multipartUpload
+putStream
+put
+abortBucketWorm
+completeBucketWorm
+deleteBucketLifecycle
+deleteBucketCORS
+deleteBucket
+deleteBucketPolicy
+deleteBucketEncryption
+deleteBucketLogging
+deleteBucketReferer
+deleteBucketTags
+extendBucketWorm
+deleteBucketWebsite
+getBucketACL
+getBucketCORS
+getBucketEncryption
+getBucketInfo
+getBucketLifecycle
+getBucketPolicy
+getBucketLogging
+getBucketLocation
+getBucketReferer
+getBucketTags
+getBucketRequestPayment
+getBucketVersioning
+getBucketWebsite
+getBucketWorm
+initiateBucketWorm
+putBucketACL
+listBuckets
+putBucket
+putBucketCORS
+putBucketEncryption
+putBucketPolicy
+putBucketLifecycle
+putBucketReferer
+putBucketLogging
+putBucketRequestPayment
+putBucketVersioning
+putBucketTags
+putBucketWebsite
+processObjectSave
+abortMultipartUpload
+handleUploadPart
+listParts
+completeMultipartUpload
+listUploads
+initMultipartUpload
+multipartUploadCopy
+resumeMultipart
+uploadPart
+uploadPartCopy
+append
+calculatePostSignature
+copy
+deleteMulti
+deleteObject
+deleteObjectTagging
+generateObjectUrl
+getACL
+get
+getAsyncFetch
+getBucketVersions
+getObjectMeta
+getObjectTagging
+getObjectUrl
+getSymlink
+head
+list
+postAsyncFetch
+putACL
+putMeta
+putObjectTagging
+restore
+putSymlink
+signatureUrl
 ```
